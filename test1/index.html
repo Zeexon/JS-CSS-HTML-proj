@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto&family=Rock+Salt&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css"/>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <form  id="main-form">
+            <h3 class="header-title">Обратная форма</h3>
+            <div class="requiredInputsDiv">
+                <div class="nameInputDiv">
+                    <label class="nameLabel" for="name">Имя</label>
+                    <input id="nameInput" onkeyup="validateName()" required/> 
+                    <span class="error-message-name error-message"></span>
+                </div>
+                <div class="phoneNumInputDiv">
+                    <label class="phoneNumberLabel" for="phoneNumber">Телефон</label>
+                    <input id="phoneNumberInput" onkeyup="validateNumber()" required/> 
+                    <span class="error-message-number error-message"></span>
+                </div>
+                
+            </div>
+            <div class="emailInputDiv">
+                <label for="emailAddress" class="emailAddressLabel">E-mail</label>
+                <input id="emailAddressInput"  onkeyup="validateEmail()"/>
+                <span class="error-message-email error-message"></span>
+            </div>
+            <div class="textareaInputDiv">
+                <span class="textAreaSpan">Сообщение</span>
+                <textarea id="textArea" class="messageTextArea"></textarea>
+            </div>
+            
+            <div class="finishDiv">
+                
+                <span class="message">
+                    Отправляя форму, вы соглашаетесь на <span class="underline">обработку персональных данных</span>
+                </span>
+                <button id="btn">Отправить</button>
+            </div>
+            
+        </form>
+    </div>
+    <script src="index.js"></script>
+    <script src="serverFetch.js"></script>
+</body>
+</html>
